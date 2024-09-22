@@ -1,0 +1,19 @@
+{
+    "name": "justin/brainspark-lab-backend-php",
+    "description": "A PHP version of Brainspark-Lab backend.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Justin\\BrainsparkLabBackendPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Justin Tzu-Hung Lin",
+            "email": "hozion612356@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
