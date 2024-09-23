@@ -3,6 +3,9 @@
     "description": "A PHP version of Brainspark-Lab backend.",
     "type": "library",
     "license": "MIT",
+    "scripts": {
+        "start": "php -S localhost:8000 server.php"
+    },
     "autoload": {
         "psr-4": {
             "Justin\\BrainsparkLabBackendPhp\\": "src/"
@@ -15,5 +18,7 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "require": {
+        "firebase/php-jwt": "^6.10"
+    }
 }
