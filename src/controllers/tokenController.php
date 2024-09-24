@@ -12,7 +12,6 @@ Class TokenController {
   }
 
   public function issue_token (&$TEMP_DATA) {
-    echo json_encode($TEMP_DATA) . "\n";
 
     // Create the JWT token
     $payload = [
@@ -22,7 +21,6 @@ Class TokenController {
       'email' => $TEMP_DATA['email']
     ];
     $jwt = JWT::encode($payload, $this->JWT_SECRET, 'HS256');
-    echo json_encode($jwt) . "\n";
     $TEMP_DATA['quiz_user'] = $jwt;
   }
 }

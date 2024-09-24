@@ -21,7 +21,6 @@ class UserRoute {
     // Check if the endpoint is valid
     $pattern = '/^\/[a-zA-Z]+$/';
     if (preg_match($pattern, $endpoint)) {
-      echo "$endpoint, $method\n";
 
       // Check if the endpoint is valid
       if (array_key_exists($endpoint, $this->endpoints)) {
@@ -52,14 +51,14 @@ class UserRoute {
         ]);
         exit;
 
-      } else $this->error_handler("Invalid endpoint", $endpoint);
-    } else $this->error_handler("Invalid endpoint", $endpoint);
+      } else $this->error_handler("Invalid_endpoint", $endpoint);
+    } else $this->error_handler("Invalid_endpoint", $endpoint);
   }
 
   // Error handler
   public function error_handler ($message, $variable) {
-    echo "$message: $variable\n";
-    http_response_code(404);
+    error_log("Error Message: " . $message . " Variables: " . json_encode($variable));
+    http_response_code(200);
     echo json_encode([
       "success" => false,
       "error" => $message
