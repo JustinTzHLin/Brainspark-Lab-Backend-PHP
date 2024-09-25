@@ -6,14 +6,14 @@ header('Access-Control-Allow-Credentials: true');
 header('Access-Control-Allow-Headers: Content-Type, Authorization');
 header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
 header('Content-Type: application/json');
-require 'vendor/autoload.php';
+require_once 'vendor/autoload.php';
 
 // Load the .env file
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__, '.env.local');
 $dotenv->load();
 
 // Require the router
-require 'router.php';
+require_once 'router.php';
 
 // Get the raw POST data and Decode the JSON data
 $json_data = json_decode(file_get_contents('php://input'), true);

@@ -1,7 +1,8 @@
 <?php
 
 // Require all routes
-require 'src/routes/userRoute.php';
+require_once 'src/routes/userRoute.php';
+require_once 'src/routes/quizRoute.php';
 
 // Create the router
 class Router {

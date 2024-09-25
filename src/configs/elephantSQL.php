@@ -6,7 +6,6 @@ $DBNAME = $_ENV['DBNAME'];
 $USER = $_ENV['USER'];
 $PASSWORD = $_ENV['PASSWORD'];
 
-echo "$HOST, $DBNAME, $USER, $PASSWORD\n";
 // Connect to the database
 $conn = pg_connect("host=$HOST dbname=$DBNAME user=$USER password=$PASSWORD")
   or die('Could not connect: ' . pg_last_error());
